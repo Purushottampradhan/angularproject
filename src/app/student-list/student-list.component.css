@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+.student-list{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    max-width: auto;
+    max-height: auto;
+    width: auto;
+    height: auto;
+}
+.student-data{
+    display:flex;
+    flex: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    background-color: rgb(203, 208, 241);
+    margin: 10px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+.item{
+    margin: 2px;
+    padding: 10px;
+}
+.student-data:hover{
+    background-color:rgb(170, 177, 223); ;
+}
+
+.btn{
+margin: 4px;
+padding: 4px;
+
+}
+#editbtn{
+    background-color:rgb(140, 221, 221);
+    border-radius: 4px;
+}
+#editbtn:hover{
+    background-color:rgb(36, 123, 123)
+}
+#deletebtn{
+    background-color: rgb(170, 161, 218);
+    border-radius: 4px;
+}
+#deleteebtn:hover{
+    background-color: rgb(110, 101, 160);
+}

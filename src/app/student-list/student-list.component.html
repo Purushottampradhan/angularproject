@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student list</title>
+  </head>
+  <body>
+    <div class="student-list">
+      <!-- <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>CLASS</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+        </table> -->
+
+      <!-- <div class="heading">
+        <ul>
+          <li>S.No id  Name  Class</li>
+        </ul> -->
+      <!-- </div>
+      <div class="studentdata">
+        <ol type="1">
+          <li *ngFor="let item of list">
+            {{ item.id }}
+            {{ item.name }}
+            {{ item.class }}
+          </li>
+        </ol>
+      </div> -->
+      <div class="student-list">
+        <div class="student-data" *ngFor="let item of list">
+          <div class="student-id item">{{ item.id }}</div>
+          <div class="student-name item">{{ item.name }}</div>
+          <div class="student-class item">{{ item.class }}</div>
+          <div class="btn">
+            <a routerLink="/input-form/{{item.id}}">
+              <button id="editbtn" (click)="onedit(item)"> Edit</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button id="deletebtn" (click)="ondelete(item.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
