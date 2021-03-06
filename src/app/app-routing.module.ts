@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path:'input-form/:id',
     component:InputFormComponent
+  },
+  {
+    path:'**',
+    component:InputFormComponent
   }
 
 ];

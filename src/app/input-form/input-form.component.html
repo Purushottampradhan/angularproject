@@ -9,20 +9,21 @@
 <body>
     <div class=input-container>
         <form #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)">
-
+            <!-- <form [formGroup]="studentdetails" #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)"  >            -->
             <div class='input'>
                 <label for="name">Name:</label>
-                <input id="name" type="text" name='name' ngModel placeholder="enter name">
+                <input id="name" type="text" name='name' [(ngModel)]=" userobj.name" placeholder="enter name">
             </div>
             <div class='input'>
                 <label for="class">Class:</label>
-                <input id="class" type="text" name='class' ngModel placeholder="enter class">
+                <input id="class" type="text" name='class' [(ngModel)]=" userobj.class"  placeholder="enter class">
             </div>
             <div class='btn'>
                 <button id='submit' type="submit">Submit</button>
                 <button id='cancle' type="reset">cancle</button>
             </div>
         </form>
+
     </div>
         <!-- <form #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)">
 

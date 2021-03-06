@@ -6,18 +6,19 @@ import { AppComponent } from './app.component';
 import { InputFormComponent } from './input-form/input-form.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms"
+import {ReactiveFormsModule,FormsModule} from "@angular/forms"
 @NgModule({
   declarations: [
     AppComponent,
     InputFormComponent,
-    StudentListComponent
+    StudentListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+  // ReactiveFormsModule,
+  FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
