@@ -9,10 +9,7 @@ import {InputFormComponent} from "../input-form/input-form.component"
   styleUrls: ['./student-list.component.css'],
 })
 export class StudentListComponent implements OnInit {
-  userobj={
-    name:'',
-    class:" "
-  }
+
 
   @Input() list: any;
   constructor(private userservice: UserService) {
@@ -40,14 +37,13 @@ export class StudentListComponent implements OnInit {
   }
 //edit function 
   onedit(user: any) {
-    this.userobj=user;
-    console.log(this.userobj.name)
-    // this.userservice.currentdata(user.id).subscribe(
-    //   (result) => {
-    //     console.log(result);
-    //   },
-    //   (err) => console.log(err)
-    // ); 
+    // console.log(user)
+    this.userservice.currentdata(user).subscribe(
+      (result) => {
+        // console.log(result);
+      },
+      (err) => console.log(err)
+    ); 
     
   }
 }

@@ -8,19 +8,20 @@
 </head>
 <body>
     <div class=input-container>
-        <form #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)">
+        <form #userpost="ngForm">
             <!-- <form [formGroup]="studentdetails" #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)"  >            -->
             <div class='input'>
                 <label for="name">Name:</label>
-                <input id="name" type="text" name='name' [(ngModel)]=" userobj.name" placeholder="enter name">
+                <input id="name" type="text" name='name' [(ngModel)]=" userobj.name">
             </div>
             <div class='input'>
                 <label for="class">Class:</label>
-                <input id="class" type="text" name='class' [(ngModel)]=" userobj.class"  placeholder="enter class">
+                <input id="class" type="text" name='class' [(ngModel)]=" userobj.class">
             </div>
             <div class='btn'>
-                <button id='submit' type="submit">Submit</button>
-                <button id='cancle' type="reset">cancle</button>
+                <button id='submit' type="submit" (click)="onSubmit(userpost.value)" *ngIf="!isedit">Submit</button>
+                <button id='edit' type="submit" *ngIf="isedit" (click)="onUpdate(userpost.value)">Update</button>
+                <button id='cancle' type="reset" (click)="cancle()">Cancle</button>
             </div>
         </form>
 
