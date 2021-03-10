@@ -7,7 +7,7 @@
     <title>student list</title>
   </head>
   <body>
-    <div class="student-list">
+  
       <div class="student-list">
         <div class="student-data" *ngFor="let item of list">
           <div class="student-id item">{{ item.id }}</div>
@@ -15,14 +15,13 @@
           <div class="student-class item">{{ item.class }}</div>
           <div class="btn">
             <a routerLink="/input-form/{{item.id}}">
-              <button id="editbtn" (click)="onedit(item)" > Edit</button>
+              <button mat-button id="editbtn" (click)="onedit(item)" > <mat-icon>edit</mat-icon></button>
             </a>
           </div>
           <div class="btn">
-            <button id="deletebtn" (click)="ondelete(item.id)">Delete</button>
+            <button mat-button id="deletebtn" (click)="ondelete(item.id)"><mat-icon>delete_outline</mat-icon></button>
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>

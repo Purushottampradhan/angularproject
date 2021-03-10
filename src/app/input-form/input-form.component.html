@@ -9,28 +9,29 @@
 <body>
     <div class=input-container>
         <form #userpost="ngForm">
-            <!-- <form [formGroup]="studentdetails" #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)"  >            -->
             <div class='input'>
-                <label for="name">Name:</label>
-                <input id="name" type="text" name='name' [(ngModel)]=" userobj.name">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Enter name</mat-label>
+                    <input matInput #message maxlength="256" placeholder="Ex. Purushottam Pradhan..." id="name" type="text" name='name' [(ngModel)]=" userobj.name">
+                    <!-- <mat-error>You must enter name </mat-error> -->
+                  </mat-form-field>
             </div>
             <div class='input'>
-                <label for="class">Class:</label>
-                <input id="class" type="text" name='class' [(ngModel)]=" userobj.class">
+                    <mat-form-field class="example-full-width">
+                    <mat-label>Enter Class</mat-label>
+                    <input matInput  #message maxlength="256" placeholder="Ex. MCA..." id="class" type="text" name='class' [(ngModel)]=" userobj.class">
+                    <!-- <mat-error>You must enter class </mat-error> -->
+                  </mat-form-field>
             </div>
             <div class='btn'>
-                <button id='submit' type="submit" (click)="onSubmit(userpost.value)" *ngIf="!isedit">Submit</button>
-                <button id='edit' type="submit" *ngIf="isedit" (click)="onUpdate(userpost.value)">Update</button>
-                <button id='cancle' type="reset" (click)="cancle()">Cancle</button>
+                <button mat-button id='submit' type="submit" (click)="onSubmit(userpost.value)" *ngIf="!isedit">Submit</button>
+                <button mat-button id='edit' type="submit" *ngIf="isedit" (click)="onUpdate(userpost.value)">Update</button>
+                <button mat-button id='cancle' type="reset" (click)="cancle()">Cancle</button>
             </div>
+  
         </form>
 
     </div>
-        <!-- <form #userpost="ngForm" (ngSubmit)="onSubmit(userpost.value)">
-
-    <input type="text" name="name" ngModel placeholder="enter name"><br>
-    <input type="text" name="class" ngModel placeholder="enter class"><br>
-    <button type="submit">submit data</button>
-  </form> -->
+      
 </body>
 </html>

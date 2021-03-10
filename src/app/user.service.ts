@@ -6,12 +6,12 @@ import { throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  isedit=false;
-  myuserobj={
-    name:'',
-    class:" ",
-    id:''
-  }
+  isedit = false;
+  // myuserobj = {
+  //   name: '',
+  //   class: ' ',
+  //   id: '',
+  // };
   constructor(private http: HttpClient) {}
   url =
     'https://us-central1-services-example-39773.cloudfunctions.net/app/api/students';
@@ -23,18 +23,22 @@ export class UserService {
     return this.http.post(this.url, data).pipe(catchError(this.handleError));
   }
   deletedata(id: any) {
-    return this.http.delete(this.url + '/' + id)
+    return this.http
+      .delete(this.url + '/' + id)
       .pipe(catchError(this.handleError));
   }
   currentdata(id: any) {
-    this.isedit=true;
-    this.myuserobj=id;
-    console.log(this.myuserobj.id)
-    return this.http.get(this.url + '/' + id)
+    this.isedit = true;
+    // this.myuserobj = id;
+    // console.log(this.myuserobj);
+    return this.http
+      .get(this.url + '/' + id)
       .pipe(catchError(this.handleError));
   }
-  putdata(user:any){
-    return this.http.put(this.url + '/' + user.id,user).pipe(catchError(this.handleError));
+  putdata(user: any) {
+    return this.http
+      .put(this.url + '/' + user.id, user)
+      .pipe(catchError(this.handleError));
   }
   handleError(error: any) {
     return throwError(error.message || 'server error');

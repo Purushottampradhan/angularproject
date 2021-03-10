@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>student form</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student form</title>
+  </head>
+  <body>
+    <!-- router Link for student-list and input form   -->
+    <!-- <div class="navbar">
+      <a routerLink="input-form">Home</a>
+      <a routerLink="student-list">Student-List </a>
+    </div> -->
+    <mat-toolbar>
+      <a routerLink="input-form">Home</a>
+      <a routerLink="student-list">Student-List </a>
+    </mat-toolbar>
 
-  <!-- router Link for student-list and input form   -->
-  <div class='navbar'>
-    <a routerLink="input-form" >Home</a>
-    <a routerLink="student-list">Student-List </a>
-  </div>
-  <h1>Student Form</h1>
-  <!-- <div class="student-form"> -->
+    <h1>Student Form</h1>
+    <!-- <mat-tab-group>
+      <mat-tab label="home"></mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+    </mat-tab-group> -->
+    <!-- <div class="student-form"> -->
     <!-- <app-input-form></app-input-form> -->
     <!-- <app-student-list [list]="data"></app-student-list>   -->
-  <!-- </div> -->
+    <!-- </div> -->
+    <!-- <button mat-button>click-here</button>
+    <button mat-raised-button>raised button</button>
+    <button mat-strocked-button>click me</button>
+    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link button</a>
+    <button mat-flat-button>flat button </button>
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>more_vert</mat-icon>
+      <mat-icon>home</mat-icon>
+      <mat-icon>menu</mat-icon>
+      <mat-icon>favorite</mat-icon>
+      <mat-icon>open_in_new</mat-icon>
+      <mat-icon>delete</mat-icon>
+      <mat-icon>bookmark</mat-icon>
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <!-- <mat-tab-group>
+      <mat-tab label="First"> Content 1 </mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="Third"> Content 3 </mat-tab>
+    </mat-tab-group> -->
+    <!-- <mat-card>Simple card</mat-card>
+    <mat-grid-list cols="1" rowHeight="10%:1%">
+      <mat-grid-tile>1</mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>3</mat-grid-tile>
+      <mat-grid-tile>4</mat-grid-tile>
+    </mat-grid-list>
+     -->
+    <!-- <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Legacy form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p> -->
+    <!-- <button mat-raised-button (click)="opendialog()">open dialog</button> -->
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+     
+    </mat-form-field> -->
+    <!-- <input matInput [matDatepicker]="picker" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker> -->
     <router-outlet></router-outlet>
-</body>
+    <!-- <mat-progress-bar mode="determinate" value="30"></mat-progress-bar> -->
+    <!-- <table matSort (matSortChange)="sortData($event)">
+      <tr>
+        <th mat-sort-header="name">Dessert (100g)</th>
+        <th mat-sort-header="calories">Calories</th>
+        <th mat-sort-header="fat">Fat (g)</th>
+        <th mat-sort-header="carbs">Carbs (g)</th>
+        <th mat-sort-header="protein">Protein (g)</th>
+      </tr>
+    
+      <tr *ngFor="let dessert of sortedData">
+        <td>{{dessert.name}}</td>
+        <td>{{dessert.calories}}</td>
+        <td>{{dessert.fat}}</td>
+        <td>{{dessert.carbs}}</td>
+        <td>{{dessert.protein}}</td>
+      </tr>
+    </table> -->
+  </body>
 </html>
